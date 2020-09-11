@@ -1,16 +1,16 @@
-import { gql } from "apollo-boost";
+import {gql} from 'apollo-boost';
 
 const searchQuery = gql`
-    query SearchQuery($term: String!) {
-        search(term: $term){
-            artist
-            episodesCount
-            feedUrl
-            podcastName
-            thumbnail
-            genres
-        }
+  query SearchQuery($term: String!) {
+    search(term: $term) {
+      artist
+      episodesCount
+      feedUrl
+      podcastName
+      thumbnail
+      genres
     }
+  }
 `;
 
 export default searchQuery;

@@ -1,14 +1,16 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {ScrollView, Image, TouchableOpacity} from 'react-native';
+import {ScrollView, Image, TouchableOpacity, Linking} from 'react-native';
 import FeatherIcon from 'react-native-vector-icons/Feather';
 import {useRoute} from '@react-navigation/native';
+import HTML from 'react-native-render-html';
 
 import {Box, Text} from 'react-native-design-utility';
 import {FeedQuery_feed, SearchQuery_search} from 'src/types/graphql';
 import {theme} from '../../constants/theme';
 import {humanDuration} from '../../lib/dateTimeHelper';
 import {usePlayerContext} from '../../context/playerContext';
+import HTMLReader from '../HTMLReader';
 
 const EpisodeDetailsScreen = () => {
   const routeParams = (useRoute().params ?? {}) as {
@@ -71,7 +73,7 @@ const EpisodeDetailsScreen = () => {
             <Text size="xl" weight="bold">
               Episode Notes
             </Text>
-            <Text>{routeParams.episode.description}</Text>
+            <HTMLReader html={routeParams.episode.description} />
           </Box>
         </Box>
       </ScrollView>
