@@ -30,9 +30,9 @@
 * In your project directory run the command: `yarn android`
 
 ### Screenshots
-<img src="screenshots/Screenshot_1600008297.png" width="200"> <img src="screenshots/Screenshot_1600008297.png" width="200">
-<img src="screenshots/Screenshot_1600008315.png" width="200"> <img src="screenshots/Screenshot_1600008349.png" width="200">
-<img src="screenshots/Screenshot_1600008354.png" width="200"> <img src="screenshots/Screenshot_1600026623.png" width="200">
-<img src="screenshots/Screenshot_1600008366.png" width="200">
+<img src="screenshots/Screenshot_1600008297.png" width="200"> <img src="screenshots/Screenshot_1600008315.png" width="200">
+<img src="screenshots/Screenshot_1600008349.png" width="200"> <img src="screenshots/Screenshot_1600026623.png" width="200">
+<img src="screenshots/Screenshot_1600008354.png" width="200"> <img src="screenshots/Screenshot_1600008366.png" width="200">
+
 
 
