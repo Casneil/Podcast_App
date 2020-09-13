@@ -7,6 +7,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {usePlayerContext} from "../../contexts/playerContext";
 import { theme } from "../../constants/theme";
 import { useNavigation } from "@react-navigation/native";
+import {makeHitSlop} from "../../constants/metrix";
 import {ProgressSlider} from "./ProgressSlider";
 
 const {width} = Dimensions.get('window');
@@ -20,17 +21,17 @@ const PlayerScreen = () =>{
 
     return (
         <SafeAreaView style={styles.safeArea}>
-            <Box f={1} bg="white" pt="md">
-                <Box px="md" mb="md">
+            <Box f={1} bg="white" pt="md" >
+                <Box px="md" mb="md" dir="row" align="center" justify="between">
                     <TouchableOpacity
                         onPress={navigation.goBack}
-                        hitSlop={{
-                            bottom: 20,
-                            top: 20,
-                            left: 20,
-                            right: 20,
-                        }}>
+                        hitSlop={makeHitSlop(20)}>
                         <FeatherIcon name="chevron-down" size={40} />
+                    </TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate("Queue")}
+                        hitSlop={makeHitSlop(20)}>
+                        <FeatherIcon name="list" size={40} />
                     </TouchableOpacity>
                 </Box>
                 <Box center mb="md">
