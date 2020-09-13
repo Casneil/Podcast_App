@@ -16,6 +16,7 @@ interface PlayerContextType {
     play: (track: Track) => void;
     pause: () => void;
     seekTo: (value?: number) => void;
+    goTo: (amount: number) => void;
 }
 
 export const playerContext = React.createContext<PlayerContextType>({
@@ -27,6 +28,7 @@ export const playerContext = React.createContext<PlayerContextType>({
     play: () => null,
     pause: () => null,
     seekTo: () => null,
+    goTo: () => null
 });
 
 export const PlayerContextProvider: React.FC = (props) => {
@@ -47,6 +49,10 @@ export const PlayerContextProvider: React.FC = (props) => {
             listener.remove();
         };
     }, []);
+
+    const goTo = async (amount: number) => {
+        await await RNTrackPlayer.seekTo(amount);
+    };
 
     const play = async (track: Track) => {
         if (!track) {
@@ -81,6 +87,7 @@ export const PlayerContextProvider: React.FC = (props) => {
         pause,
         play,
         seekTo,
+        goTo
     };
     return (
         <playerContext.Provider value={value}>

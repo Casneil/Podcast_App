@@ -7,6 +7,7 @@ import {SafeAreaView} from "react-native-safe-area-context";
 import {usePlayerContext} from "../../contexts/playerContext";
 import { theme } from "../../constants/theme";
 import { useNavigation } from "@react-navigation/native";
+import {ProgressSlider} from "./ProgressSlider";
 
 const {width} = Dimensions.get('window');
 
@@ -38,6 +39,9 @@ const PlayerScreen = () =>{
                 <Box center mb="md" px="md">
                     <Text bold center mb="sm">{track.title}</Text>
                     <Text color="grey" size="sm">{track.artist}</Text>
+                </Box>
+                <Box px="md" mb="sm">
+                    <ProgressSlider />
                 </Box>
                 <Box dir="row" justify="center">
                     <Box>
