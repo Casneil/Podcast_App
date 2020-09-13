@@ -1,35 +1,27 @@
-/* eslint-disable prettier/prettier */
-import React, {PropsWithChildren} from 'react';
-import {ScrollView, TouchableOpacity, StyleSheet, Keyboard} from 'react-native';
+import React from "react";
+import {Keyboard, ScrollView, StyleSheet, TouchableOpacity} from "react-native";
 
 interface Props {
-  withScrollView: boolean;
+    withScrollView?: boolean;
 }
-
-const KeyboardDismissView: React.FC<Props> = (
-  props: PropsWithChildren<Props>,
-) => {
-  if (props.withScrollView) {
+const KeyboardDismissView: React.FC<Props> = (props) => {
+    if(props.withScrollView){
+        return (
+            <ScrollView keyboardShouldPersistTaps="never" contentContainerStyle={styles.container}>
+                {props.children}
+            </ScrollView>
+        )
+    }
     return (
-      <ScrollView keyboardShouldPersistTaps="never">
-        {props.children}
-      </ScrollView>
-    );
-  }
-  return (
-    <TouchableOpacity
-      style={style.container}
-      activeOpacity={1}
-      onPress={Keyboard.dismiss}>
-      {props.children}
-    </TouchableOpacity>
-  );
+        <TouchableOpacity activeOpacity={1} style={styles.container} onPress={Keyboard.dismiss}>
+            {props.children}
+        </TouchableOpacity>
+    )
 };
 
-const style = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
+const styles = StyleSheet.create({
+   container: {
+      flex: 1
+   }
 });
-
 export default KeyboardDismissView;

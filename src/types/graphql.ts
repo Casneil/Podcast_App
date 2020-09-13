@@ -1,5 +1,3 @@
-/* tslint:disable */
-/* eslint-disable */
 // @generated
 // This file was automatically generated and should not be edited.
 
@@ -16,6 +14,7 @@ export interface FeedQuery_feed {
     pubDate: string;
     text: string;
     title: string;
+    summary: string;
 }
 
 export interface FeedQuery {
@@ -55,13 +54,13 @@ export interface SearchQueryVariables {
 
 /* tslint:disable */
 /* eslint-disable */
-  // @generated
-  // This file was automatically generated and should not be edited.
+// @generated
+// This file was automatically generated and should not be edited.
 
-  //==============================================================
-  // START Enums and Input Objects
-  //==============================================================
+//==============================================================
+// START Enums and Input Objects
+//==============================================================
 
-  //==============================================================
-  // END Enums and Input Objects
-  //==============================================================
+//==============================================================
+// END Enums and Input Objects
+//==============================================================

@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Text } from "react-native-design-utility"
+import {Box} from "react-native-design-utility";
+import {Text} from "react-native";
 
 const ListenNowScreen = () => {
     return (
@@ -7,6 +8,6 @@ const ListenNowScreen = () => {
             <Text>Listen Now Screen</Text>
         </Box>
     )
-}
+};
 
 export default ListenNowScreen;
