@@ -61,7 +61,7 @@ export const PlayerContextProvider: React.FC = (props) => {
             }
             return;
         }
-        if (currentTrack && track.is !== currentTrack.id) {
+        if (currentTrack && track.id !== currentTrack.id) {
             await RNTrackPlayer.reset();
         }
         await RNTrackPlayer.add([track]);
