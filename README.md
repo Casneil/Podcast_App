@@ -26,7 +26,7 @@
 ### Build
     
 * Open project in android studio and it will automatically build the project.
-* After build succeeded, click the play button to run the the built on your android emulator.
+* After build succeeded, click the play button to run the built on your android emulator.
 * In your project directory run the command: `yarn android`
 
 ### Screenshots
